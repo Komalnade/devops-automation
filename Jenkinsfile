@@ -22,7 +22,7 @@ pipeline {
             steps{
                 script{
                     withCredentials([string(credentialsId: 'dockerhub', variable: 'dockerhubpwd')]) {
-                    sh 'docker login -u komalnade -p ${Komal@698}'
+                    sh 'docker login -u komalnade -p ${dockerhubpwd}'
                         
                     }
                     sh 'docker push suresh394/kubernetes'
